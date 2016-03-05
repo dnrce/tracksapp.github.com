@@ -1,19 +1,7 @@
-source "http://rubygems.org"
+source 'https://rubygems.org'
 
-group :development do
-  gem 'rake'
-  gem 'rack'
-  gem 'jekyll'
-  gem 'rdiscount'
-  gem 'pygments.rb'
-  gem 'RedCloth'
-  gem 'haml', '>= 3.1'
-  gem 'compass', '>= 0.11'
-  gem 'rubypants'
-  gem 'rb-fsevent'
-  gem 'stringex'
-  gem 'liquid', '2.2'
-  gem 'sass', '3.1.17'
-end
+require 'json'
+require 'open-uri'
+versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 
-gem 'sinatra', '1.2.6'
+gem 'github-pages', versions['github-pages']

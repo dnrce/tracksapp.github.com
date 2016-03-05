@@ -6,6 +6,7 @@
 .rvmrc
 .redcar/
 _deploy
+Gemfile.lock
 public
 sass.old
 source.old
@@ -14,4 +15,3 @@ source/stylesheets/screen.css
 vendor
 node_modules
 .tm_properties
-
