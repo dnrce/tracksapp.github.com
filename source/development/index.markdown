@@ -19,16 +19,16 @@ The latest stable version of Tracks can be downloaded as a .zip file (see the do
 
 To clone Tracks, change to a directory in which you want to store Tracks (e.g. ~/Sites):
 
-{% codeblock lang:bash %}
+```bash
 git clone https://github.com/TracksApp/tracks.git
 cd tracks
-{% endcodeblock %}
+```
 
 If (when!) you produce a cool new feature or fix a bug, create a patch. If you develop in a branch called 'experiment':
 
-{% codeblock lang:bash %}
+```bash
 git diff master..experiment > my_feature.patch 
-{% endcodeblock %}
+```
 
 Then attach my_feature.patch to a ticket.
 
