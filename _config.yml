@@ -36,16 +36,6 @@ index_posts: 10       # Custom setting to limit posts on news and articles index
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 
-# list each of the sidebar modules you want to include, in the order you want them to appear.
-# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [custom/asides/get_tracks.html, asides/github.html, custom/asides/community.html, custom/asides/recent_news.html, custom/asides/resources.html, custom/asides/gpl.html ]
-
-# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
-# and add an array with the asides you want to use.
-# blog_index_asides:
-# post_asides:
-# page_asides:
-
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
