@@ -14,7 +14,8 @@ $sidebar-width-wide: 300px !default;
 
 $indented-lists: false !default;
 
-.group { @include pie-clearfix; }
+@mixin group { @include pie-clearfix; }
+.group { @include group; }
 
 @mixin collapse-sidebar {
   float: none;
@@ -107,12 +108,12 @@ body.sidebar-footer {
   body { -webkit-text-size-adjust: auto; }
   body > header { font-size: 1.2em; }
   #main {
-    @extend .group;
+    @include group;
     padding: 0;
     margin: 0 auto;
   }
   #content {
-    @extend .group;
+    @include group;
     margin-right: $sidebar-width-medium;
     position: relative;
     .no-sidebar & { margin-right: 0; border-right: 0; }
@@ -124,7 +125,7 @@ body.sidebar-footer {
     }
   }
   aside.sidebar {
-    @extend .group;
+    @include group;
     width: $sidebar-width-medium - $sidebar-pad-medium*2;
     padding: 0 $sidebar-pad-medium $sidebar-pad-medium;
     background: none;
@@ -155,7 +156,7 @@ body.sidebar-footer {
     padding: 1.2em $sidebar-pad-wide $sidebar-pad-wide;
     .collapse-sidebar & {
       padding: { left: $pad-wide; right: $pad-wide; }
-      @extend .group;
+      @include group;
     }
   }
 }

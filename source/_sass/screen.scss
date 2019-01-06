@@ -1,6 +1,4 @@
-@import "compass";
-@include global-reset;
-@include reset-html5;
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css);
 
 @import "custom/colors";
 @import "custom/layout";

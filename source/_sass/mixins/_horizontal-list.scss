@@ -1,0 +1,33 @@
+@mixin horizontal-list-container {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+@mixin horizontal-list-item($padding: 4px, $direction: left) {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  float: $direction;
+  @if $padding {
+    padding: {
+      left: $padding;
+      right: $padding;
+    };
+    &:first-child {
+      padding-#{$direction}: 0;
+    }
+    &:last-child {
+      padding-#{opposite-position($direction)}: 0;
+    }
+  }
+}
+
+@mixin horizontal-list($padding: 4px, $direction: left) {
+  @include horizontal-list-container;
+  li {
+    @include horizontal-list-item($padding, $direction);
+  }
+}
